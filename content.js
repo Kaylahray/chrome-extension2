@@ -4,7 +4,7 @@ console.log("Hi, I have been injected whoopie!!!");
 var recorder = null;
 function onAccessApproved(stream) {
   ws = new WebSocket("ws://martdev.tech:3000");
-  ws.onopen(() => {
+  ws.onopen = () => {
     recorder = new MediaRecorder(stream, { mimeType: "video/webm" });
 
     recorder.ondataavailable = (buffer) => {
@@ -25,7 +25,7 @@ function onAccessApproved(stream) {
     ws.onclose = () => {
       console.log("WebSocket connection closed");
     };
-  });
+  };
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
