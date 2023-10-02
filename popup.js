@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
-// Declare initial state variables within the same scope
 let requestButtonClicked = false;
 let requestButton2Clicked = false;
-let requestButtonInitialState = true; // Initially, the class is "request"
-let requestButton2InitialState = true; // Initially, the class is "request2"
+let requestButtonInitialState = true;
+let requestButton2InitialState = true;
 
 document.addEventListener("DOMContentLoaded", () => {
   // GET THE SELECTORS OF THE BUTTONS
